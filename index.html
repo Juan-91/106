@@ -16,26 +16,30 @@
         <section id="list" class="border bg-primary bg-opacity-10">
             GET section
         </section>
-
+             
         <section id="form" class="border">
             <div class="mt-2">
                 <label for="txtTitle" class="form-label">Title</label>
-                <input type="txtTitle" type="text" class="form-control">
+                <input id="txtTitle" type="text" class="form-control">
             </div>
+
             <div class="mt-4">
                 <label for="txtDescription" class="form-label">Description</label>
-                <textarea type="txtDescription" class="form-control" rows="3"></textarea>
+                <textarea id="txtDescription" class="form-control" rows="3"></textarea>
             </div>
+
             <div class="mt-4">
                 <label for="txtColor" class="form-label">Color</label>
                 <input id="txtColor" type="color" class="form-control">
             </div>
+
             <div class="mt4">
                 <label class="form-label"> Date</label>
                 <input id="txtDate" type="datetime-local" class="form-control"/>
             </div>
+
             <div class="mt-4">
-                <label for="" class="form-label">Satus</label>
+                <label for="selStatus" class="form-label">Satus</label>
                 <select id="selStatus" class="form-select">
                     <option >New</option>
                     <option >In Progress</option>
@@ -44,13 +48,14 @@
             </div>
 
             <div class="mt-4">
-                <label for="nonBudget" class="form-label">Budget</label>
-                <input id="nonBudget" type="text" class="form-control">
+                <label for="numBudget" class="form-label">Budget</label>
+                <input id="numBudget" type="number" class="form-control">
             </div>
 
             <div class="mt-4">
                 <button id="btnSave" class="btn btn-primary">Save</button>
             </div>
+
         </section>
     </main>
 
