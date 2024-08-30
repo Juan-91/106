@@ -49,9 +49,33 @@ function saveTask(){
         $("#list").append(syntax);
 }
 
+function loadTask(){
+    console.log("Hello from loadTask");
+    
+    $.ajax({
+        type:"get",
+        url: "http://fsdiapi.azurewebsites.net/api/tasks/",
+        success: function(response){
+            console.log("response: ", response);
+
+            let data=JSON.parse(response);
+            console.log("response json: ", data);
+            
+            for(let i=0; i<data.length;i++){
+                let task=data[i];
+                console.log(" This task is: ", task);
+                if(task.name=="Juan"){
+                    displayTask(task);
+                }
+            }
+        }
+    })
+}
+
       
 function init(){
     $("#btnSave").click(saveTask);
 }
 
 window.onload=init
+
